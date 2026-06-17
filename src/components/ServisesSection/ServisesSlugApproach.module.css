@@ -1,0 +1,107 @@
+.approachSection {
+  padding: 60px 0;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0 auto;
+}
+.approachTop {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.approachTitle {
+  width: 588px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.approachTitle p {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #223229;
+}
+.approachTitle h2 {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #385144;
+}
+.approachRight {
+  width: 588px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.approachRight p {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #67707b;
+}
+
+.items {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.item {
+  border-radius: 24px;
+  padding: 24px;
+  width: 588px;
+  height: 248px;
+  background: #385144;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.title {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: whitesmoke;
+}
+
+.text {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: whitesmoke;
+}
+.icon {
+  width: 32px;
+  height: 32px;
+}
+.iconTitle {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+}
+.iconConrainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  padding: 12px;
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  --color1: #385144;
+}

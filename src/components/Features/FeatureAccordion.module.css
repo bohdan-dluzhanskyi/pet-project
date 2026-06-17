@@ -1,0 +1,143 @@
+.container {
+  border-radius: 32px;
+  padding: 24px;
+  width: 588px;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  transition: gap 0.3s ease;
+  background: #385144;
+}
+
+.containerNormal {
+  gap: 24px;
+}
+
+.containerCompact {
+  gap: 10px;
+}
+
+.card {
+  border-radius: 24px;
+  padding: 16px;
+  width: 540px;
+  min-height: 80px;
+  background: #fff;
+  flex: 1;
+  transition:
+    flex 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    background-color 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardOpen {
+  flex: 3;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.card h3 {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #385144;
+  margin: 0;
+  margin-left: 16px;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  width: 48px;
+  height: 48px;
+  background: #385144;
+  flex-shrink: 0;
+  --color1: #ffffff;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.learnMoreButton {
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  background: #385144;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+  --color1: #ffffff;
+}
+
+.learnMoreButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+.learnMoreButton:hover {
+  background: #223229;
+}
+
+.content {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.content p {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  color: #67707b;
+  text-align: left;
+  margin: 0;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: #385144;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all 0.4s ease;
+}
+
+.cardOpen .line {
+  opacity: 0.2;
+  transform: scaleX(1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

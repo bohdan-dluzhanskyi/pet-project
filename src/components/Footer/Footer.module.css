@@ -1,0 +1,143 @@
+.footer {
+  padding: 60px 120px;
+  background: #385144;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: whitesmoke;
+  margin: 0 auto;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.logo {
+  width: 346px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fefefe;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #cef8e2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 62px;
+  align-items: center;
+}
+.logoContainer p {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 62px;
+  margin-top: 40px;
+  margin-left: 408px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  width: 180px;
+}
+
+.navServices {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style: none;
+  width: 240px;
+  height: 220px;
+}
+
+.navSocial {
+  width: 273px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.navAddress {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-style: normal;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  fill: #fff;
+}
+.iconSocial {
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+}
+
+.navAddressList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.navContact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+.btnLang {
+  border-radius: 100px;
+  padding: 8px 12px;
+  width: 48px;
+  height: 33px;
+  background: #fff;
+  color: #385144;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+.active {
+  background: #385144;
+  color: #fff;
+}

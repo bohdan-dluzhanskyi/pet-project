@@ -1,0 +1,31 @@
+.servicesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 60px 0;
+  max-width: 1200px;
+}
+.servicesCards {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.servicesSection h2 {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #385144;
+}
+.servicesSection p {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #223229;
+}

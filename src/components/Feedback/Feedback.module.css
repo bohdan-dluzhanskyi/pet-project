@@ -1,0 +1,35 @@
+.feedbackContainer {
+  border-radius: 32px;
+  width: 1200px;
+
+  background: linear-gradient(270deg, #385144 0%, #223229 100%);
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 60px 120px;
+}
+.feedbackTextContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.feedbackContainer h2 {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #fff;
+  width: 630px;
+}
+.feedbackText {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #fff;
+  width: 630px;
+}

@@ -1,0 +1,43 @@
+.container {
+  padding: 60px 0px;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.text h2 {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #385144;
+}
+.text p {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #67707b;
+}
+.imgWrapper {
+  position: relative;
+  width: 588px; /* Бажана ширина */
+  height: 460px; /* Бажана висота */
+  border-radius: 32px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.img {
+  object-fit: cover;
+  object-position: center;
+}

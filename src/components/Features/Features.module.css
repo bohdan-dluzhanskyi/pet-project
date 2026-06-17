@@ -1,0 +1,40 @@
+.featuresSection {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 60px 0;
+}
+.featuresImg {
+  border-radius: 32px;
+  width: 588px;
+  height: 440px;
+  object-fit: cover;
+}
+.featuresContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.sectionDescription {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #223229;
+  margin-bottom: 30px;
+}
+.featuresTitle {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #385144;
+  margin-bottom: 60px;
+  width: 588px;
+  height: 96px;
+}

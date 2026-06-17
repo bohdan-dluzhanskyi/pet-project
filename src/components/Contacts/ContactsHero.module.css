@@ -1,0 +1,94 @@
+.hero {
+  padding: 60px 0px;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.contactsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  width: 486px;
+}
+
+.contactsText h2 {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #385144;
+}
+.contactsText p {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #67707b;
+}
+
+.items {
+  width: 690px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.item {
+  border-radius: 24px;
+  padding: 24px;
+  width: 333px;
+  height: 176px;
+  background: #385144;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.title {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: white;
+}
+
+.text {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: white;
+}
+.icon {
+  width: 32px;
+  height: 32px;
+}
+.iconTitle {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+}
+.iconConrainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  padding: 12px;
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  --color1: #385144;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: white;
+}

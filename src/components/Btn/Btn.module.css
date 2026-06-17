@@ -1,0 +1,92 @@
+.btn {
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 100px;
+  padding: 12px 40px;
+  height: 44px;
+
+  cursor: pointer;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.label {
+  position: relative;
+  z-index: 2;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.45s ease,
+    height 0.45s ease;
+  z-index: 1;
+}
+
+.primary {
+  background: #385144;
+  color: white;
+}
+
+.primary::before {
+  background: #223229;
+}
+
+.primary:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.outline {
+  background: white;
+  color: #385144;
+  border: 1px solid #385144;
+}
+
+.outline::before {
+  background: #385144;
+}
+
+.outline:hover {
+  color: white;
+}
+
+.outline:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.secondary {
+  background: #223229;
+  color: white;
+}
+
+.secondary::before {
+  background: #385144;
+}
+
+.secondary:hover::before {
+  width: 400px;
+  height: 400px;
+}
