@@ -29,7 +29,7 @@ export default function Footer() {
                 <Link href="/services">Послуги</Link>
               </li>
               <li>
-                <Link href="/blog">Блог</Link>
+                <Link href="/ai-assistent">Блог</Link>
               </li>
               <li>
                 <Link href="/contacts">Контакти</Link>

@@ -22,7 +22,7 @@ export default function Header() {
               <Link href="/services">Послуги</Link>
             </li>
             <li>
-              <Link href="/blog">Блог</Link>
+              <Link href="/ai-assistent">AI-асистент</Link>
             </li>
             <li>
               <Link href="/contacts">Контакти</Link>

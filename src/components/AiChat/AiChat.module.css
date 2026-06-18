@@ -1,0 +1,174 @@
+.chatWrapper {
+  width: 100%;
+  max-width: 1200px; /* Ширина в унісон з вашими картками та акордеоном */
+  background: #223229; /* Ваша найтемніша підкладка */
+  border-radius: 32px;
+  padding: 32px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  margin: 60px auto;
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #cef8e2;
+  margin-bottom: 24px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  background: #4ade80;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #4ade80;
+}
+
+.chatWindow {
+  height: 380px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-right: 8px;
+}
+
+/* Кастомний красивий скролбар */
+.chatWindow::-webkit-scrollbar {
+  width: 4px;
+}
+.chatWindow::-webkit-scrollbar-thumb {
+  background: #385144;
+  border-radius: 100px;
+}
+
+.placeholder {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%; /* Забезпечує повітря між рядками */
+  color: #9da8b5;
+  text-align: center;
+  margin: auto;
+  padding: 0 24px;
+  width: 640px;
+}
+
+/* Виділення важливих слів іншим кольором (наприклад, вашим світло-зеленим) */
+.placeholder b {
+  font-weight: 500;
+  color: #cef8e2;
+}
+
+.userMsg,
+.aiMsg {
+  padding: 16px 20px;
+  border-radius: 24px;
+  max-width: 85%;
+}
+
+.userMsg {
+  background: #385144; /* Ваш базовий зелений */
+  color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.aiMsg {
+  background: #ffffff;
+  color: #223229;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.msgLabel {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  opacity: 0.6;
+}
+
+.msgContent {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 145%;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.input {
+  flex: 1;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 16px 24px;
+  border-radius: 100px;
+  border: 1px solid #385144;
+  background: #16221b;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #cef8e2;
+}
+
+.sendButton {
+  width: 52px;
+  height: 52px;
+  background: #cef8e2;
+  color: #223229;
+  border: none;
+  border-radius: 100px;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.sendButton:hover {
+  background: #ffffff;
+  transform: scale(1.03);
+}
+
+.sendButton:disabled {
+  background: #385144;
+  color: #16221b;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.ctaBlock {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
