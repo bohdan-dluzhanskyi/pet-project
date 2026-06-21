@@ -1,23 +1,29 @@
 .approachSection {
   padding: 60px 0;
   max-width: 1200px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 60px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
+
 .approachTop {
   display: flex;
   flex-direction: row;
   gap: 24px;
 }
+
 .approachTitle {
-  width: 588px;
-  height: 160px;
+  max-width: 588px;
+  width: 100%;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
+
 .approachTitle p {
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
@@ -25,7 +31,9 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #223229;
+  margin: 0;
 }
+
 .approachTitle h2 {
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
@@ -33,14 +41,18 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #385144;
+  margin: 0;
 }
+
 .approachRight {
-  width: 588px;
-  height: 160px;
+  max-width: 588px;
+  width: 100%;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 }
+
 .approachRight p {
   font-family: "Unbounded", sans-serif;
   font-weight: 300;
@@ -48,25 +60,34 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #67707b;
+  margin: 0;
 }
 
 .items {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 24px;
+  box-sizing: border-box;
 }
+
 .item {
   border-radius: 24px;
   padding: 24px;
-  width: 588px;
-  height: 248px;
+  max-width: 588px;
+  width: 100%;
+  min-height: 248px;
+  height: auto;
   background: #385144;
-  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  box-sizing: border-box;
+  flex: 1;
 }
+
 .title {
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
@@ -83,25 +104,120 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: whitesmoke;
+  word-break: break-word;
 }
+
 .icon {
   width: 32px;
   height: 32px;
 }
+
 .iconTitle {
   display: flex;
   flex-direction: row;
   gap: 24px;
   align-items: center;
 }
+
 .iconConrainer {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  padding: 12px;
   width: 56px;
   height: 56px;
   background: #fff;
   --color1: #385144;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .approachSection {
+    max-width: calc(100% - 40px);
+    gap: 40px;
+  }
+
+  .approachTitle h2 {
+    font-size: 32px;
+  }
+
+  .items {
+    justify-content: center;
+  }
+
+  .item {
+    flex: none;
+    max-width: calc(50% - 12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .approachSection {
+    padding: 40px 0;
+    gap: 32px;
+  }
+
+  .approachTop {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .approachTitle {
+    min-height: auto;
+    gap: 16px;
+  }
+
+  .approachTitle p {
+    font-size: 16px;
+  }
+
+  .approachTitle h2 {
+    font-size: 26px;
+    line-height: 130%;
+  }
+
+  .approachRight {
+    min-height: auto;
+  }
+
+  .approachRight p {
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  .items {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .item {
+    max-width: 100%;
+    padding: 20px;
+    gap: 16px;
+    min-height: auto;
+  }
+
+  .iconTitle {
+    gap: 16px;
+  }
+
+  .iconConrainer {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 130%;
+  }
 }

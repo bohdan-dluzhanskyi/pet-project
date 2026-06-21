@@ -2,29 +2,25 @@
   background-image:
     linear-gradient(rgba(2, 2, 2, 0.57), rgba(0, 0, 0, 0.4)),
     url("/hero-bg.jpg");
-
   background-size: cover;
   background-position: center;
   border-radius: 32px;
   min-height: 533px;
   max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0 auto 60px auto;
   padding: 60px 0;
   display: flex;
   flex-direction: row;
   position: relative;
-
-  margin-bottom: 60px;
 }
+
 .heroText {
   color: white;
-  font-size: 26px;
   width: 50%;
   display: flex;
   font-family: "Unbounded", sans-serif;
-  font-weight: 600;
   font-size: 44px;
-
   line-height: 64px;
   letter-spacing: -0.02em;
   flex-direction: column;
@@ -33,16 +29,17 @@
   font-weight: 300;
   gap: 16px;
 }
+
 .title span {
   color: #cef8e2;
 }
+
 .miniModal {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 24px;
-  padding: 24px;
+  padding: 16px;
   width: 305px;
   height: 154px;
-  padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -55,11 +52,13 @@
   letter-spacing: -0.02em;
   text-align: center;
   color: #385144;
+
   position: absolute;
   top: 70%;
   left: 80%;
   transform: translate(-50%, -50%);
 }
+
 .description {
   font-family: "Unbounded", sans-serif;
   font-weight: 300;
@@ -69,34 +68,64 @@
   color: #fff;
 }
 
-.servicesSection {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin: 0 auto;
-  padding: 60px 0;
-  max-width: 1200px;
+@media (max-width: 1024px) {
+  .heroSection {
+    max-width: calc(100% - 40px);
+    padding: 48px 0;
+  }
+
+  .heroText {
+    width: 60%;
+    font-size: 36px;
+    line-height: 52px;
+  }
+
+  .miniModal {
+    left: 75%;
+  }
+
+  .servicesSection {
+    max-width: calc(100% - 40px);
+  }
+
+  .servicesCards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
-.servicesCards {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-.servicesSection h2 {
-  font-family: "Unbounded", sans-serif;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 120%;
-  letter-spacing: -0.02em;
-  text-align: center;
-  color: #385144;
-}
-.servicesSection p {
-  font-family: "Unbounded", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 120%;
-  letter-spacing: -0.02em;
-  color: #223229;
+
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: auto;
+    padding: 40px 20px;
+    gap: 32px;
+    border-radius: 24px;
+    min-height: 500px;
+  }
+
+  .heroText {
+    width: 100%;
+    padding-left: 0;
+    font-size: 26px;
+    line-height: 38px;
+    text-align: center;
+    margin-bottom: 200px;
+  }
+
+  .miniModal {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    justify-content: center;
+    align-items: center;
+  }
+  .title {
+    font-size: 32px;
+  }
 }

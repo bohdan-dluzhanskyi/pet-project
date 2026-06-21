@@ -1,52 +1,56 @@
-/* Базове скидання для модалки, щоб паддінги не ламали розміри */
-.modal,
-.modal *,
-.modal *::before,
-.modal *::after {
-  box-sizing: border-box;
+.modalOverlay,
+.modalOverlay *,
+.modalOverlay *::before,
+.modalOverlay *::after {
+  box-sizing: border-box !important;
 }
 
-.modal {
-  border: none;
-  border-radius: 32px;
-  padding: 0;
-  background: #385144; /* Ваш фірмовий глибокий зелений фон */
-  max-width: 996px;
-  width: calc(100% - 32px);
-  box-shadow: 0 24px 64px rgba(34, 50, 41, 0.3);
-
-  /* Ідеальне центрування самого вікна на екрані */
+/* Затемнений фон на весь екран */
+.modalOverlay {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-}
-
-.modal::backdrop {
-  background: rgba(22, 34, 27, 0.7); /* Трохи темніший оверлей для контрасту */
+  inset: 0;
+  background: rgba(22, 34, 27, 0.7);
   backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 16px;
+  width: 100vw;
+  height: 100vh;
+  animation: fadeIn 0.2s ease-out forwards;
 }
 
+/* Тіло модалки */
+.modal {
+  background: #385144;
+  border-radius: 32px;
+  width: 100% !important;
+  max-width: 640px; /* Оптимальна ширина для форм */
+  max-height: calc(100vh - 32px); /* Захист від виходу за висоту екрана */
+  box-shadow: 0 24px 64px rgba(34, 50, 41, 0.3);
+  overflow-y: auto; /* Додає внутрішній скрол, якщо форма не вміщається по висоті */
+  overflow-x: hidden;
+  animation: scaleIn 0.25s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Контент всередині */
 .modalContent {
   position: relative;
-  padding: 64px 48px; /* Трохи збільшено верхній паддінг для простору */
+  padding: 48px 32px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Центрує всі блоки (лого, текст, форму) по горизонталі */
+  align-items: center;
   justify-content: center;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
-@media (max-width: 480px) {
-  .modalContent {
-    padding: 40px 24px;
-  }
-}
-
+/* Кнопка закриття */
 .closeButton {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 16px;
+  right: 16px;
   background: #f4f6f5;
   border: none;
   border-radius: 100px;
@@ -70,21 +74,24 @@
 
 /* Логотип */
 .logoContainer {
-  display: flex; /* ОБОВ'ЯЗКОВО для вирівнювання */
+  display: flex;
   align-items: center;
-  justify-content: center; /* Центрує логотип по горизонталі */
+  justify-content: center;
   gap: 12px;
-  margin-bottom: 24px;
-  width: 100%;
+  margin-bottom: 20px;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .logo {
   font-family: "Unbounded", sans-serif;
-  font-size: 42px;
+  font-size: 32px; /* Зменшено базовий розмір для стабільності */
   font-weight: 700;
   color: #fefefe;
   text-decoration: none;
   text-align: center;
+  max-width: 100% !important;
+  display: block;
 }
 
 .logo span {
@@ -94,54 +101,47 @@
 /* Заголовки */
 .modalContent h2 {
   font-family: "Unbounded", sans-serif;
-  font-weight: 300;
-  font-size: 28px; /* Трохи збільшено для балансу з шириною 996px */
-  line-height: 120%;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
   letter-spacing: -0.02em;
-  text-align: center; /* Центрує текст всередині рядка */
+  text-align: center;
   color: whitesmoke;
-  margin: 0 auto 12px auto; /* margin: 0 auto центрує сам блок h2 */
-  max-width: 700px;
+  margin: 0 auto 12px auto;
+  width: 100% !important;
+  max-width: 100% !important;
+  word-break: break-word !important; /* Переносить слова, якщо вони задовгі */
 }
 
 .subtitle {
   font-family: "Unbounded", sans-serif;
   font-weight: 300;
-  font-size: 18px; /* Зменшено з 24px, щоб тексти не зливалися за розміром з H2 */
+  font-size: 15px;
   line-height: 140%;
   letter-spacing: -0.02em;
   text-align: center;
-  color: #e1e5e3; /* Більш м'який світлий колір */
-  width: 100%;
-  max-width: 588px; /* Обмежуємо ширину тексту, як у вашому коді */
-  margin: 0 auto 36px auto; /* Центрує блок підзаголовка */
+  color: #e1e5e3;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto 24px auto;
+  word-break: break-word !important;
 }
 
-/* Форма та інпути */
+/* Форма */
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  max-width: 480px; /* ОБОВ'ЯЗКОВО: обмежує ширину всієї форми, щоб інпути не розтягувалися на весь екран */
-  margin: 0 auto; /* Центрує форму по центру модалки */
+  gap: 16px;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .inputGroup {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 100%;
-}
-
-/* Назви полів (Ваше ім'я тощо) робимо білими на темному фоні */
-.inputGroup label {
-  font-family: "Unbounded", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  color: #cef8e2;
-  text-align: left; /* Залишаємо вирівнювання ліворуч для зручності читання */
-  padding-left: 4px;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .inputGroup input,
@@ -149,62 +149,55 @@
   font-family: "Unbounded", sans-serif;
   font-weight: 300;
   font-size: 15px;
-  padding: 16px 24px;
-  border-radius: 16px; /* Округла форма інпутів */
+  padding: 14px 20px;
+  border-radius: 16px;
   border: 1px solid #e1e5e3;
   background: #f4f6f5;
   color: #223229;
   outline: none;
-  width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
   transition:
     border-color 0.3s ease,
-    background 0.3s ease,
-    box-shadow 0.3s ease;
+    background 0.3s ease;
 }
 
-/* Для телефону та імені робимо закруглені кути-капсули (100px), як ви хотіли спочатку */
 .inputGroup input {
   border-radius: 100px;
-  height: 48px; /* Трохи збільшено висоту для кращого кліку */
+  height: 44px;
 }
 
 .textarea {
   border-radius: 20px;
   resize: vertical;
-  min-height: 120px;
+  min-height: 100px;
 }
 
 .inputGroup input:focus,
 .textarea:focus {
   border-color: #cef8e2;
   background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(206, 248, 226, 0.15); /* Елегантне підсвічування при фокусі */
 }
 
 /* Кнопка відправки */
 .submitButton {
   position: relative;
   overflow: hidden;
-
   border-radius: 100px;
-  padding: 12px 40px;
-  height: 48px; /* Трохи збільшено для комфортного кліку */
-  width: 100%; /* Щоб займала всю ширину форми */
-
+  padding: 12px 24px;
+  height: 44px;
+  width: 100% !important;
+  max-width: 100% !important;
   background: whitesmoke;
-  color: #385144; /* Початковий колір тексту */
-
+  color: #385144;
   cursor: pointer;
   font-family: "Unbounded", sans-serif;
   font-weight: 600;
-  font-size: 16px;
-  letter-spacing: -0.02em;
-
+  font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
-
   transition:
     transform 0.3s ease,
     color 0.3s ease;
@@ -213,45 +206,84 @@
 .label {
   position: relative;
   z-index: 2;
-  transition: color 0.3s ease; /* Плавна зміна кольору тексту */
 }
 
 .submitButton::before {
   content: "";
   position: absolute;
-  /* Якщо мишка ще не зайшла на кнопку, коло стоятиме по центру */
   left: var(--x, 50%);
   top: var(--y, 50%);
   width: 0;
   height: 0;
-  background: #223229; /* Темніший зелений для гарного контрасту при ховері */
+  background: #223229;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-
-  /* Важливо для плавного розмиття */
   transition:
-    width 0.5s cubic-bezier(0.25, 1, 0.5, 1),
-    height 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    width 0.5s ease,
+    height 0.5s ease;
   z-index: 1;
 }
 
-/* --- МАГІЯ, ЯКОЇ НЕ ВИСТАЧАЛО --- */
-
-/* 1. При ховері коло розширюється та перекриває всю кнопку */
 .submitButton:hover::before {
   width: 1000px;
   height: 1000px;
 }
 
-/* 2. Текст стає білим, коли кнопка зафарбовується зеленим */
 .submitButton:hover .label {
   color: #ffffff;
 }
 
-.submitButton:hover {
-  transform: translateY(-2px);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-.submitButton:active {
-  transform: scale(0.97);
+/* ===================================================
+   АДАПТИВНІ СТИЛІ (Мобільні екрани)
+   =================================================== */
+@media (max-width: 768px) {
+  .modalOverlay {
+    padding: 12px; /* Мінімальні відступи по краях екрана */
+  }
+
+  .modal {
+    border-radius: 24px;
+  }
+
+  .modalContent {
+    padding: 32px 16px; /* Зменшуємо внутрішній простір */
+  }
+
+  .logo {
+    font-size: 24px; /* Компактний розмір лого */
+  }
+
+  .modalContent h2 {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .inputGroup input,
+  .textarea {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
 }

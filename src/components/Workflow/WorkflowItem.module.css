@@ -1,11 +1,13 @@
 .itemContainer {
-  width: 581px;
-  height: 77px;
+  max-width: 581px;
+  width: 100%;
+  min-height: 77px;
   display: flex;
   flex-direction: row;
   align-items: center;
   border-left: 2px solid #223229;
   padding-left: 60px;
+  box-sizing: border-box;
 }
 
 .itemIcon {
@@ -18,9 +20,15 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
 .icon {
   width: 32px;
+  height: 32px;
+  display: block;
 }
 
 .itemContainer:hover .itemIcon {
@@ -31,8 +39,9 @@
 .itemFlex {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
 }
+
 .itemTitle {
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
@@ -40,6 +49,7 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #385144;
+  margin: 0;
 }
 
 .itemText {
@@ -49,4 +59,35 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #67707b;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .itemContainer {
+    padding-left: 20px;
+    align-items: flex-start;
+    min-height: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .itemIcon {
+    width: 44px;
+    height: 44px;
+    margin-right: 16px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .itemTitle {
+    font-size: 16px;
+  }
+
+  .itemText {
+    font-size: 14px;
+    line-height: 130%;
+  }
 }

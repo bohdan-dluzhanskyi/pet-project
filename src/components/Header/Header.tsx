@@ -1,36 +1,72 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import css from "./Header.module.css";
 import Btn from "../Btn/Btn";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <header className={css.header}>
       <div className={css.container}>
-        <Link href="/" className={css.logo}>
+        <Link href="/" className={css.logo} onClick={closeMenu}>
           Developer<span>Service</span>
         </Link>
 
-        <nav>
+        {/* Кнопка бургер-меню */}
+        <button
+          className={`${css.burgerBtn} ${isOpen ? css.active : ""}`}
+          onClick={toggleMenu}
+          aria-label="Переключити меню"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav className={`${css.nav} ${isOpen ? css.active : ""}`}>
           <ul className={css.navList}>
             <li>
-              <Link href="/">Головна</Link>
+              <Link href="/" onClick={closeMenu}>
+                Головна
+              </Link>
             </li>
             <li>
-              <Link href="/about">Про компанію</Link>
+              <Link href="/about" onClick={closeMenu}>
+                Про компанію
+              </Link>
             </li>
             <li>
-              <Link href="/services">Послуги</Link>
+              <Link href="/services" onClick={closeMenu}>
+                Послуги
+              </Link>
             </li>
             <li>
-              <Link href="/ai-assistent">AI-асистент</Link>
+              <Link href="/ai-assistent" onClick={closeMenu}>
+                AI-асистент
+              </Link>
             </li>
             <li>
-              <Link href="/contacts">Контакти</Link>
+              <Link href="/contacts" onClick={closeMenu}>
+                Контакти
+              </Link>
             </li>
           </ul>
         </nav>
 
-        <Btn text="Зв'язатись" variant="primary" />
+        <div className={`${css.ctaBtn} ${isOpen ? css.active : ""}`}>
+          <Btn text="Зв'язатись" variant="primary" />
+        </div>
       </div>
     </header>
   );

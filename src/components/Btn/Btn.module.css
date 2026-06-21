@@ -1,20 +1,20 @@
 .btn {
   position: relative;
   overflow: hidden;
-
   border-radius: 100px;
   padding: 12px 40px;
   height: 44px;
-
+  width: max-content;
   cursor: pointer;
   font-family: "Unbounded", sans-serif;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: -0.02em;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  border: none;
   transition:
     transform 0.3s ease,
     color 0.3s ease;
@@ -89,4 +89,12 @@
 .secondary:hover::before {
   width: 400px;
   height: 400px;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    height: 42px;
+    font-size: 14px;
+    padding: 10px 32px;
+  }
 }

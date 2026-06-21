@@ -29,3 +29,12 @@
   letter-spacing: -0.02em;
   color: #223229;
 }
+
+@media (max-width: 768px) {
+  .servicesSection {
+    padding: 40px 20px;
+  }
+  .servicesCards {
+    flex-direction: column;
+  }
+}

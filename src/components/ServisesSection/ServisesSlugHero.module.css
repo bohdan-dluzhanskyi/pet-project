@@ -1,16 +1,20 @@
 .container {
-  padding: 60px 0px;
-  width: 1200px;
+  padding: 60px 0;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   gap: 24px;
+  box-sizing: border-box;
 }
+
 .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 24px;
+  flex: 1;
 }
 
 .text h2 {
@@ -20,7 +24,9 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #385144;
+  margin: 0;
 }
+
 .text p {
   font-family: "Unbounded", sans-serif;
   font-weight: 300;
@@ -28,16 +34,65 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #67707b;
+  margin: 0;
 }
+
 .imgWrapper {
   position: relative;
-  width: 588px; /* Бажана ширина */
-  height: 460px; /* Бажана висота */
+  max-width: 588px;
+  width: 100%;
+  height: 460px;
   border-radius: 32px;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .img {
   object-fit: cover;
   object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: calc(100% - 40px);
+    gap: 20px;
+  }
+
+  .text h2 {
+    font-size: 32px;
+  }
+
+  .imgWrapper {
+    height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    gap: 32px;
+    padding: 40px 0;
+  }
+
+  .text {
+    text-align: center;
+    gap: 16px;
+  }
+
+  .text h2 {
+    font-size: 26px;
+  }
+
+  .text p {
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  .imgWrapper {
+    max-width: 100%;
+    height: 280px;
+    border-radius: 24px;
+  }
 }

@@ -38,3 +38,12 @@
   width: 588px;
   height: 96px;
 }
+@media (max-width: 768px) {
+  .featuresSection {
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .featuresContainer {
+    flex-direction: column;
+  }
+}

@@ -2,7 +2,7 @@
   border-radius: 32px;
   padding: 32px;
   flex: 1;
-  height: 447px;
+  min-height: 447px;
   display: flex;
   align-items: flex-end;
   cursor: pointer;
@@ -77,4 +77,6 @@
 .card:hover .button {
   opacity: 1;
   transform: translateX(0);
+}
+@media (max-width: 768px) {
 }

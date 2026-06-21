@@ -1,23 +1,28 @@
 .workflowContainer {
   padding: 60px 0;
   max-width: 1200px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 60px;
   margin: 0 auto;
 }
+
 .workflowTop {
   display: flex;
   flex-direction: row;
   gap: 24px;
 }
+
 .workflowTitle {
-  width: 588px;
-  height: 160px;
+  max-width: 588px;
+  width: 100%;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
+
 .workflowTitle p {
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
@@ -25,7 +30,9 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #223229;
+  margin: 0;
 }
+
 .workflowTitle h2 {
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
@@ -33,14 +40,18 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #385144;
+  margin: 0;
 }
+
 .workflowRight {
-  width: 588px;
-  height: 160px;
+  max-width: 588px;
+  width: 100%;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 }
+
 .workflowRight p {
   font-family: "Unbounded", sans-serif;
   font-weight: 300;
@@ -48,21 +59,93 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #67707b;
+  margin: 0;
 }
+
 .workflowMane {
   display: flex;
   flex-direction: row;
   gap: 24px;
   align-items: center;
 }
+
 .workflowImg {
   border-radius: 32px;
-  width: 588px;
+  max-width: 588px;
+  width: 100%;
   height: 540px;
   object-fit: cover;
 }
+
 .workflowItems {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .workflowContainer {
+    max-width: calc(100% - 40px);
+    gap: 40px;
+  }
+
+  .workflowTitle h2 {
+    font-size: 32px;
+  }
+
+  .workflowImg {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .workflowContainer {
+    padding: 40px 0;
+    gap: 32px;
+  }
+
+  .workflowTop {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .workflowTitle {
+    min-height: auto;
+    gap: 16px;
+  }
+
+  .workflowTitle p {
+    font-size: 16px;
+  }
+
+  .workflowTitle h2 {
+    font-size: 26px;
+    line-height: 130%;
+  }
+
+  .workflowRight {
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  .workflowRight p {
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  .workflowMane {
+    flex-direction: column;
+    gap: 32px;
+    align-items: stretch;
+  }
+
+  .workflowImg {
+    height: 280px;
+    border-radius: 24px;
+  }
+
+  .workflowItems {
+    gap: 24px;
+  }
 }

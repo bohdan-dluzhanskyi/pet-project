@@ -1,17 +1,21 @@
 .hero {
-  padding: 60px 0px;
-  width: 1200px;
+  padding: 60px 0;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   gap: 24px;
+  box-sizing: border-box;
 }
+
 .contactsText {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 24px;
-  width: 486px;
+  max-width: 486px;
+  width: 100%;
 }
 
 .contactsText h2 {
@@ -21,7 +25,9 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #385144;
+  margin: 0;
 }
+
 .contactsText p {
   font-family: "Unbounded", sans-serif;
   font-weight: 300;
@@ -29,29 +35,35 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #67707b;
+  margin: 0;
 }
 
 .items {
-  width: 690px;
+  max-width: 690px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px;
 }
+
 .item {
-  border-radius: 24px;
-  padding: 24px;
-  width: 333px;
-  height: 176px;
+  border-radius: 20px;
+  padding: 16px;
+  max-width: 337px;
+  width: 100%;
+  min-height: 140px;
+  height: auto;
   background: #385144;
-  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
+  box-sizing: border-box;
 }
+
 .title {
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 120%;
   letter-spacing: -0.02em;
   color: white;
@@ -60,35 +72,121 @@
 .text {
   font-family: "Unbounded", sans-serif;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 120%;
+  font-size: 15px;
+  line-height: 130%;
   letter-spacing: -0.02em;
   color: white;
+  word-break: break-word;
 }
+
 .icon {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
 }
+
 .iconTitle {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 16px;
   align-items: center;
 }
+
 .iconConrainer {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  padding: 12px;
-  width: 56px;
-  height: 56px;
+  width: 44px;
+  height: 44px;
   background: #fff;
   --color1: #385144;
+  box-sizing: border-box;
+  flex-shrink: 0;
 }
+
 .line {
   width: 100%;
   height: 2px;
   border-radius: 2px;
   background: white;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    max-width: calc(100% - 40px);
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contactsText {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .contactsText h2 {
+    font-size: 36px;
+  }
+
+  .items {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .item {
+    max-width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 0;
+    gap: 32px;
+  }
+
+  .contactsText {
+    gap: 16px;
+  }
+
+  .contactsText h2 {
+    font-size: 26px;
+  }
+
+  .contactsText p {
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  .items {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .item {
+    max-width: 100%;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .iconTitle {
+    gap: 12px;
+  }
+
+  .iconConrainer {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
 }

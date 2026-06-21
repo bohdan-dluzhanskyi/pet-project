@@ -1,23 +1,29 @@
 .approachSection {
   padding: 60px 0;
   max-width: 1200px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 60px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
+
 .approachTop {
   display: flex;
   flex-direction: row;
   gap: 24px;
 }
+
 .approachTitle {
-  width: 588px;
-  height: 160px;
+  max-width: 588px;
+  width: 100%;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
+
 .approachTitle p {
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
@@ -25,7 +31,9 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #223229;
+  margin: 0;
 }
+
 .approachTitle h2 {
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
@@ -33,14 +41,18 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #385144;
+  margin: 0;
 }
+
 .approachRight {
-  width: 588px;
-  height: 160px;
+  max-width: 588px;
+  width: 100%;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 }
+
 .approachRight p {
   font-family: "Unbounded", sans-serif;
   font-weight: 300;
@@ -48,48 +60,62 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #67707b;
+  margin: 0;
 }
+
 .approachCards {
   border-radius: 32px;
   padding: 24px;
-  width: 1200px;
-  height: 242px;
+  max-width: 1200px;
+  width: 100%;
+  min-height: 242px;
   background: #385144;
   display: flex;
   flex-direction: row;
   gap: 24px;
+  box-sizing: border-box;
 }
+
 .approachCard {
   border-radius: 24px;
   padding: 24px;
-  width: 368px;
-  height: 194px;
+  max-width: 368px;
+  width: 100%;
+  min-height: 194px;
   background: #fff;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  box-sizing: border-box;
+  flex: 1;
 }
+
 .cardTitle {
   display: flex;
   flex-direction: row;
   gap: 24px;
   align-items: center;
 }
+
 .cardIcon {
   border-radius: 100px;
   padding: 12px;
   width: 56px;
   height: 56px;
-  background: #385144;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .icon {
   width: 32px;
   height: 32px;
   display: inline-block;
-
   stroke: #ffffff;
   fill: none;
 }
+
 .cardTitle h3 {
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
@@ -97,7 +123,9 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #385144;
+  margin: 0;
 }
+
 .cardText {
   font-family: "Unbounded", sans-serif;
   font-weight: 300;
@@ -105,4 +133,100 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #67707b;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .approachSection {
+    max-width: calc(100% - 40px);
+    gap: 40px;
+  }
+
+  .approachTitle h2 {
+    font-size: 32px;
+  }
+
+  .approachCards {
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+  }
+
+  .approachCard {
+    flex: none;
+    max-width: calc(50% - 12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .approachSection {
+    padding: 40px 0;
+    gap: 32px;
+  }
+
+  .approachTop {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .approachTitle {
+    min-height: auto;
+    gap: 16px;
+  }
+
+  .approachTitle p {
+    font-size: 16px;
+  }
+
+  .approachTitle h2 {
+    font-size: 26px;
+    line-height: 130%;
+  }
+
+  .approachRight {
+    min-height: auto;
+  }
+
+  .approachRight p {
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  .approachCards {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+    border-radius: 24px;
+  }
+
+  .approachCard {
+    max-width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .cardTitle {
+    gap: 16px;
+  }
+
+  .cardIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cardTitle h3 {
+    font-size: 18px;
+  }
+
+  .cardText {
+    font-size: 14px;
+    line-height: 130%;
+  }
 }

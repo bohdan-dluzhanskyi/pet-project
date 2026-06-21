@@ -1,20 +1,23 @@
 .feedbackContainer {
   border-radius: 32px;
-  width: 1200px;
-
+  max-width: 1200px;
+  width: 100%;
   background: linear-gradient(270deg, #385144 0%, #223229 100%);
   margin: 60px auto;
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 60px 120px;
+  box-sizing: border-box;
 }
+
 .feedbackTextContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+
 .feedbackContainer h2 {
   font-family: "Unbounded", sans-serif;
   font-weight: 500;
@@ -22,8 +25,11 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #fff;
-  width: 630px;
+  max-width: 630px;
+  width: 100%;
+  margin: 0;
 }
+
 .feedbackText {
   font-family: "Unbounded", sans-serif;
   font-weight: 300;
@@ -31,5 +37,46 @@
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #fff;
-  width: 630px;
+  max-width: 630px;
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .feedbackContainer {
+    max-width: calc(100% - 40px);
+    padding: 48px 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .feedbackContainer h2,
+  .feedbackText {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedbackContainer {
+    padding: 40px 20px;
+    gap: 16px;
+    border-radius: 24px;
+  }
+
+  .feedbackTextContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .feedbackContainer h2 {
+    font-size: 26px;
+    line-height: 130%;
+  }
+
+  .feedbackText {
+    font-size: 15px;
+    line-height: 140%;
+  }
 }
