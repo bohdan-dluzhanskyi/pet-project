@@ -30,7 +30,7 @@ export const metadata = {
     title: "Developer Service | Розробка сайтів та AI-асистентів",
     description:
       "Професійне створення веб-сайтів та інтеграція AI для автоматизації бізнесу. Обговорімо ваш проєкт!",
-    url: "https://pet-project-nine-delta.vercel.app/",
+    url: "https://developerservice-theta.vercel.app/",
     siteName: "Developer Service",
     images: [
       {
