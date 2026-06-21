@@ -34,9 +34,9 @@ export const metadata = {
     siteName: "Developer Service",
     images: [
       {
-        url: "/hero-bg.wedp",
+        url: "https://developerservice-theta.vercel.app/hero-bg.webp",
         width: 1200,
-        height: 630,
+        height: 800,
         alt: "Developer Service Preview",
       },
     ],
