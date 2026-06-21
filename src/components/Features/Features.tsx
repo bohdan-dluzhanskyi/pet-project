@@ -8,7 +8,7 @@ export default function Features() {
       <h2 className={css.featuresTitle}>Чому обирають DeveloperService</h2>
       <div className={css.featuresContainer}>
         <FeatureAccordion></FeatureAccordion>
-        <img className={css.featuresImg} src="/feature-section.jpg"></img>
+        <img className={css.featuresImg} src="/feature-section.webp"></img>
       </div>
     </section>
   );

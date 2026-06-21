@@ -3,7 +3,7 @@ import css from "./AboutHero.module.css";
 export default function AboutHero() {
   return (
     <div className={css.aboutContainer}>
-      <img className={css.aboutImg} src="/about-hero.jpg" alt="" />
+      <img className={css.aboutImg} src="/about-hero.webp" alt="teem in work" />
       <div className={css.aboutText}>
         <h2>
           <span>DeveloperService</span> — ваш надійний партнер у веб-розробці

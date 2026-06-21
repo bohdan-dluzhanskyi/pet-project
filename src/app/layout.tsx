@@ -30,11 +30,11 @@ export const metadata = {
     title: "Developer Service | Розробка сайтів та AI-асистентів",
     description:
       "Професійне створення веб-сайтів та інтеграція AI для автоматизації бізнесу. Обговорімо ваш проєкт!",
-    url: "https://yourdomain.com",
+    url: "https://pet-project-nine-delta.vercel.app/",
     siteName: "Developer Service",
     images: [
       {
-        url: "/hero-bg.jpg",
+        url: "/hero-bg.wedp",
         width: 1200,
         height: 630,
         alt: "Developer Service Preview",

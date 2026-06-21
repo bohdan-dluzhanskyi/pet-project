@@ -1,7 +1,7 @@
 .heroSection {
   background-image:
     linear-gradient(rgba(2, 2, 2, 0.57), rgba(0, 0, 0, 0.4)),
-    url("/hero-bg.jpg");
+    url("/hero-bg.webp");
   background-size: cover;
   background-position: center;
   border-radius: 32px;
@@ -44,6 +44,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 16px;
   font-family: "Unbounded", sans-serif;
   font-weight: 300;

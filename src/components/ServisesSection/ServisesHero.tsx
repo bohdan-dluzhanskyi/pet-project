@@ -13,7 +13,11 @@ export default function ServisesHero() {
           якісно й з гарантією підтримки
         </p>
       </div>
-      <img className={css.servisesImg} src="/servises-hero.jpg" alt="" />
+      <img
+        className={css.servisesImg}
+        src="/servises-hero.webp"
+        alt="teem in work"
+      />
     </div>
   );
 }

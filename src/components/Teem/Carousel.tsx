@@ -14,10 +14,20 @@ import "swiper/css/navigation";
 import css from "./Carousel.module.css";
 
 const team = [
-  { id: 1, name: "John Smith", position: "CEO", image: "/team/john.jpg" },
-  { id: 2, name: "Emma Wilson", position: "Designer", image: "/team/emma.jpg" },
-  { id: 3, name: "Mike Brown", position: "Developer", image: "/team/mike.jpg" },
-  { id: 4, name: "Anna Lee", position: "Marketing", image: "/team/anna.jpg" },
+  { id: 1, name: "John Smith", position: "CEO", image: "/team/john.webp" },
+  {
+    id: 2,
+    name: "Emma Wilson",
+    position: "Designer",
+    image: "/team/emma.webp",
+  },
+  {
+    id: 3,
+    name: "Mike Brown",
+    position: "Developer",
+    image: "/team/mike.webp",
+  },
+  { id: 4, name: "Anna Lee", position: "Marketing", image: "/team/anna.webp" },
 ];
 
 export default function Carousel() {

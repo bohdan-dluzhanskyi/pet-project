@@ -17,7 +17,11 @@ export default function Workflow() {
         </div>
       </div>
       <div className={css.workflowMane}>
-        <img className={css.workflowImg} src="/workflow.jpg" alt="" />
+        <img
+          className={css.workflowImg}
+          src="/workflow.webp"
+          alt="teem in work"
+        />
 
         <ul className={css.workflowItems}>
           <WorkflowItem

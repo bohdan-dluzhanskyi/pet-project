@@ -5,7 +5,7 @@ import Btn from "../Btn/Btn";
 import { useModalStore } from "@/src/store/useModalStore";
 import css from "./AiChat.module.css";
 
-// Описуємо структуру повідомлення вручную
+// Описуємо структуру повідомлення вручну
 interface Message {
   id: string;
   role: "user" | "assistant";
